@@ -7,6 +7,11 @@ import os
 from clustering_model import gerar_csv_com_clusters
 
 gerar_csv_com_clusters()  # Garante que o CSV com os clusters esteja atualizado
+audio_file = open('Pokémon_song.mp3', 'rb')
+audio_bytes = audio_file.read()
+
+# Exiba o player de áudio
+st.audio(audio_bytes, format='audio/mp3')
 
 # ------------------------- Configuração da Página -------------------------
 st.set_page_config(page_title="Pokédex", layout="wide")
